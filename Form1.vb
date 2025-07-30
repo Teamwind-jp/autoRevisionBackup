@@ -106,7 +106,7 @@ Public Class Form1
 
 #Region "Main Thread メインスレッド "
 
-    Private Function threadUpload(ByVal worker As System.ComponentModel.BackgroundWorker, ByVal e As System.ComponentModel.DoWorkEventArgs) As Long
+    Private Function threadBackup(ByVal worker As System.ComponentModel.BackgroundWorker, ByVal e As System.ComponentModel.DoWorkEventArgs) As Long
 
         Dim result As Long = 0
 
@@ -185,7 +185,7 @@ Public Class Form1
     'Main thread startup. メインスレッド起動
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Dim objWorker As System.ComponentModel.BackgroundWorker = CType(sender, System.ComponentModel.BackgroundWorker)
-        e.Result = threadUpload(objWorker, e)
+        e.Result = threadBackup(objWorker, e)
 
     End Sub
 

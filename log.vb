@@ -108,7 +108,6 @@ Module log
     End Sub
 
     Public Function log_getLog(ByVal targetFile As String, ByRef st As ST_LOG) As Integer
-        '指定されたファイルのバックアップフォルダ名を取得
         For i As Integer = 0 To g_logs - 1
             If g_log(i).targetFile = targetFile Then
                 st.copy(g_log(i))
