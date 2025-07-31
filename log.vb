@@ -55,7 +55,7 @@ Module log
 
         Try
 
-            Using StreamReader As New System.IO.StreamReader(My.Application.Info.DirectoryPath + "\file.log", System.Text.Encoding.GetEncoding(932))
+            Using StreamReader As New System.IO.StreamReader(My.Application.Info.DirectoryPath + "\file.log", System.Text.Encoding.UTF8)
                 While Not StreamReader.EndOfStream
                     Dim line As String = StreamReader.ReadLine()
                     sztemp = line.Split(","c)
@@ -90,7 +90,7 @@ Module log
 
         Try
 
-            Using StreamWriter As New System.IO.StreamWriter(My.Application.Info.DirectoryPath + "\file.log", False, System.Text.Encoding.GetEncoding(932))
+            Using StreamWriter As New System.IO.StreamWriter(My.Application.Info.DirectoryPath + "\file.log", False, System.Text.Encoding.UTF8)
                 For i As Integer = 0 To g_logs - 1
                     StreamWriter.WriteLine(g_log(i).targetFile + "," +
                                        g_log(i).backupPath + "," +
