@@ -25,7 +25,6 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.file1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.min1 = New System.Windows.Forms.TextBox()
@@ -38,6 +37,12 @@ Partial Class Form1
         Me.msg1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.start_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowWindow_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Exit_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BackgroundWorker1
@@ -147,6 +152,35 @@ Partial Class Form1
         Me.Button3.Text = "Log"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Text = "auto Revision Backup"
+        Me.NotifyIcon1.Visible = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.start_ToolStripMenuItem, Me.ShowWindow_ToolStripMenuItem, Me.Exit_ToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(149, 70)
+        '
+        'start_ToolStripMenuItem
+        '
+        Me.start_ToolStripMenuItem.Name = "start_ToolStripMenuItem"
+        Me.start_ToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.start_ToolStripMenuItem.Text = "Start"
+        '
+        'ShowWindow_ToolStripMenuItem
+        '
+        Me.ShowWindow_ToolStripMenuItem.Name = "ShowWindow_ToolStripMenuItem"
+        Me.ShowWindow_ToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.ShowWindow_ToolStripMenuItem.Text = "Show window"
+        '
+        'Exit_ToolStripMenuItem
+        '
+        Me.Exit_ToolStripMenuItem.Name = "Exit_ToolStripMenuItem"
+        Me.Exit_ToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.Exit_ToolStripMenuItem.Text = "Exit"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -167,13 +201,13 @@ Partial Class Form1
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "auto Revision Backup"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents file1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents min1 As TextBox
@@ -186,4 +220,9 @@ Partial Class Form1
     Friend WithEvents msg1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents start_ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowWindow_ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Exit_ToolStripMenuItem As ToolStripMenuItem
 End Class

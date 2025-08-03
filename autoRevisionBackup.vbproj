@@ -34,6 +34,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>autoRevisionBackup.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -135,6 +136,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="myicon.ico" />
+    <None Include="myicon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
