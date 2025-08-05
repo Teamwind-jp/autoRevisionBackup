@@ -387,6 +387,17 @@ Public Class Form1
 
 	End Sub
 
+
+	'file open process start
+	Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+		Dim fullpath As String = dlg_getTargetFile()
+		If fullpath.Length > 0 Then
+			Dim p As System.Diagnostics.Process = System.Diagnostics.Process.Start(fullpath)
+		End If
+
+	End Sub
+
 #End Region
 
 #Region "d&d process. d&d処理"
@@ -515,6 +526,8 @@ Public Class Form1
 		End If
 
 	End Sub
+
+
 
 #End Region
 

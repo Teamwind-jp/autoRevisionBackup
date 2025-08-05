@@ -42,6 +42,7 @@ Partial Class Form1
         Me.start_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowWindow_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Exit_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -145,11 +146,11 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(412, 27)
+        Me.Button3.Location = New System.Drawing.Point(412, 146)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Log"
+        Me.Button3.Text = "Select Log"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'NotifyIcon1
@@ -181,11 +182,21 @@ Partial Class Form1
         Me.Exit_ToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.Exit_ToolStripMenuItem.Text = "Exit"
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(412, 29)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "Open"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(512, 214)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label4)
@@ -225,4 +236,5 @@ Partial Class Form1
     Friend WithEvents start_ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowWindow_ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Exit_ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button4 As Button
 End Class
